@@ -68,45 +68,16 @@
 	<body class="page-<?php echo $pagename; ?>">
 		
 		<div id="sk-table">
-			<div class="sk-table-row row-top">
+			<div class="sk-table row-top">
 				<div class="sk-table-cell">
-					<h1>Synco</h1>
+					<h1>Logo</h1>
 				</div>
 			</div>
-			<div class="sk-table-row row-mid">
+			<div class="sk-table row-mid">
 				<div class="sk-table-cell">
-					<div id="toolbar">
-						<div class="toolbar-search">
-							<input type="text" placeholder="Search">
-						</div>
-						<div class="toolbar-items">
-							<div class="toolbar-item">
-								<div class="toolbar-item-icon"></div>
-								<div class="toolbar-item-meta"><span class="toolbar-item-name">Multiple choice</span></div>
-							</div>
-							<div class="toolbar-item">
-								<div class="toolbar-item-icon"></div>
-								<div class="toolbar-item-meta"><span class="toolbar-item-name">Checkboxes</span></div>
-							</div>
-							<div class="toolbar-item">
-								<div class="toolbar-item-icon"></div>
-								<div class="toolbar-item-meta"><span class="toolbar-item-name">Single line text</span></div>
-							</div>
-							<div class="toolbar-item">
-								<div class="toolbar-item-icon"></div>
-								<div class="toolbar-item-meta"><span class="toolbar-item-name">Paragraph text</span></div>
-							</div>
-						</div>
-					</div>
-					<!-- Survey page -->
-					<div id="survey-page-holder">
-						<div id="survey-page">
-							<div class="header"><h1>Untitled survey</h1></div>
-						</div>
-					</div>
 				</div>
 			</div>
-			<div class="sk-table-row row-bot">
+			<div class="sk-table row-bot">
 				<div class="sk-table-cell">
 				</div>
 			</div>

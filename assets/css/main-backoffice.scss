@@ -1,180 +1,72 @@
-@import 'reset';
-
-/* Colours */
-$color-background:    #bfbcb9;
-$color-border:        #e5e5e5;
-$color-icon-hover:    #c2c9cc;
-$color-icon:          #dfe5e7;
-$color-item-hover:    #dee0e1;
-$color-page:          #ffffff;
-$color-search:        #fbfbfb;
-$color-solid:         #eeeeee;
-$color-survey-header: #97c2e9;
-$color-header-text:   #ffffff;
-$color-text:          #353535;
-$color-toolbar:       #ffffff;
-
-
-/* Main */
-
-body {
-	font-family: 'Roboto', sans-serif;
-	background-color: $color-background;
-	background-image: url(../img/bg-bo.jpg);
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
 
+$primaryColor: #eeffcc;
 
-/* Main table */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+html {
+	height: 100%;
+	-webkit-font-smoothing: antialiased;
+}
+
+body {
+	line-height: 1.5;
+	background-color: $primaryColor;
+	height: 100%;
+	position: relative;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1em;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* main table */
 
 #sk-table {
+	color: red;
 	width: 100%;
 	height: 100%;
-	display: table;
-
-	.sk-table-row {
-		display: table-row;
-
-		.sk-table-cell {
-			display: table-cell;
-			position: relative;
-		}
-	}
 
 	.row-top {
-		background-color: $color-solid;
-		height: 4em;
-
-		.sk-table-cell {
-			line-height: 4em;
-		}
-
-		h1 {
-			color: $color-text;
-			font-size: 2em;
-			text-indent: 0.5em;
-		}
-	}
-
-	.row-mid {
-		.sk-table-cell {
-			height: 100%;
-		}
-		#toolbar {
-			height: 100%;
-			width: 25%;
-			max-width: 388px;
-			min-width: 200px;
-			background-color: $color-toolbar;
-			border-right: 1px solid $color-border;
-			position: absolute;
-			top: 0;
-			left: 0;
-			z-index: 2;
-
-			.toolbar-search {
-				background-color: $color-search;
-				position: relative;
-				padding: 7px;
-				border-bottom: 1px solid $color-border;
-
-				input {
-					box-sizing: border-box;
-					width: 100%;
-					padding: 0 20px 0 40px;
-					display: -webkit-box;
-					display: -webkit-flex;
-					display: -ms-flexbox;
-					display: flex;
-					-webkit-box-align: center;
-					-webkit-align-items: center;
-					-ms-flex-align: center;
-					align-items: center;
-					border: 1px solid $color-border;
-					height: 34px;
-					border-radius: 5px;
-					background-clip: padding-box;
-					background-color: #fff;
-					-webkit-transition: .12s cubic-bezier(.1,.82,.25,1);
-					transition: .12s cubic-bezier(.1,.82,.25,1);
-					background-image: url(../img/icon-search.png);
-					background-repeat: no-repeat;
-				}
-			}
-
-			.toolbar-items {
-				position: absolute;
-				top: 49px;
-				bottom: 0;
-				left: 0;
-				right: 0;
-				overflow-y: scroll;
-
-				.toolbar-item {
-					padding: 0.75em;
-					border-bottom: 1px solid $color-border;
-					overflow: auto;
-					cursor: -webkit-grab;
-					-webkit-user-select: none;
-
-					* {
-						pointer-events: none;
-					}
-
-					.toolbar-item-icon {
-						background-color: $color-icon;
-						border-radius: 50%;
-						width: 3em;
-						height: 3em;
-						display: inline-block;
-						vertical-align: top;
-						float: left;
-						margin-right: 0.75em;
-					}
-				}
-
-				.toolbar-item:hover {
-					background-color: $color-item-hover;
-
-					.toolbar-item-icon {
-						background-color: $color-icon-hover;
-					}
-				}
-			}
-		}
-
-		// Survey-page
-		#survey-page-holder {
-			display: block;
-			position: relative;
-			vertical-align: top;
-			float: right;
-			overflow-y: scroll;
-			height: 1000px;
-
-			#survey-page {
-				display: inline-block;
-				position: relative;
-				vertical-align: top;
-				width: 1280px;
-				height: 2560px;
-				background-color: $color-page;
-				margin: 5em;
-
-				.header {
-					background-color: $color-survey-header;
-					line-height: 5em;
-
-					h1 {
-						color: $color-header-text;
-						font-size: 2em;
-						text-indent: 0.5em;
-					}
-				}
-			}
-		}
-	}
-
-	.row-bot {
-		height: 0px;
+		background-color: red;
 	}
 }
